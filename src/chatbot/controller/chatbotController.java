@@ -1,9 +1,18 @@
 package chatbot.controller;
 
+import chatbot.view.PopupDisplay;
+
 public class chatbotController 
-{
- public void start()
- {
+{ 
+	private PopupDisplay display;
+	
+	public chatbotController() 
+	{
+	
+	}
+
+	public void start()
+	{
 	 
- }
+	}
 }
