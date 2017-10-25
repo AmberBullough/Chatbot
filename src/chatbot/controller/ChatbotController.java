@@ -2,11 +2,11 @@ package chatbot.controller;
 
 import chatbot.view.PopupDisplay;
 
-public class chatbotController 
+public class ChatbotController 
 { 
 	private PopupDisplay display;
 	
-	public chatbotController() 
+	public ChatbotController() 
 	{
 	
 	}
