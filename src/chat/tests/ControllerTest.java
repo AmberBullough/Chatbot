@@ -1,4 +1,4 @@
-package chatbot.test;
+package chat.tests;
 
 import static org.junit.Assert.*;
 

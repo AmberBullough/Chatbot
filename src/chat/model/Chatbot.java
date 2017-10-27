@@ -47,7 +47,8 @@ public class Chatbot
 		verbs [3] = "am thinking about";
 	}
 
-	private void buildMovieList()	{
+	private void buildMovieList()	
+	{
 		
 	}
 	
