@@ -35,7 +35,7 @@ public class Chatbot
 		
 		buildVerbs();
 		buildShoppingList();
-		buildQuestions();
+		buildCuteAnimals();
 	}
 	
 	private void buildVerbs()
@@ -63,22 +63,16 @@ public class Chatbot
 	
 	private void buildCuteAnimals()
 	{
-		
+		cuteAnimalMemes.add("pupper");
+		cuteAnimalMemes.add("otter");
+		cuteAnimalMemes.add("kittie");
+		cuteAnimalMemes.add("FLOOFER");
 	}
 	
 	private void buildQuestions()
 	{
-		questions.add("What is your name?");
-		questions.add("What do you need from the store?");
-		questions.add("What if your favorite movie?");
-		questions.add("Who is your favorite in that movie?");
-		questions.add("");
-		questions.add("");
-		questions.add("");
-		questions.add("");
-		questions.add("");
-		questions.add("What does the fox say?");
 		
+	
 	}
 	
 	public String processConversation(String input)
@@ -122,7 +116,7 @@ public class Chatbot
 	
 	public boolean shoppingListChecker(String shoppingItem)
 	{
-		return false;
+		return true;
 	}
 	
 	public boolean movieTitleChecker(String title)
