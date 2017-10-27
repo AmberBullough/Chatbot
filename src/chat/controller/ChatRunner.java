@@ -1,12 +1,12 @@
-package chatbot.controller;
+package chat.controller;
 
-import chatbot.view.PopupDisplay;
+import chat.view.PopupDisplay;
 
-public class ChatbotRunner 
+public class ChatRunner 
 {
  public static void main(String []args)
  {
-	 ChatbotController chatbot= new ChatbotController();
+	 ChatController chatbot = new ChatController();
 	 chatbot.start();
 	// PopupDisplay sample = new PopupDisplay();
 	// sample.displayText("Badger");

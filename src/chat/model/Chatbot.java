@@ -1,4 +1,4 @@
-package chatbot.model;
+package chat.model;
 
 import java.util.List;
 import java.time.LocalTime;
@@ -36,6 +36,7 @@ public class Chatbot
 		buildVerbs();
 		buildShoppingList();
 		buildCuteAnimals();
+		//buildMovieList();
 	}
 	
 	private void buildVerbs()
@@ -46,8 +47,7 @@ public class Chatbot
 		verbs [3] = "am thinking about";
 	}
 
-	private void buildMovieList()
-	{
+	private void buildMovieList()	{
 		
 	}
 	
@@ -156,7 +156,7 @@ public class Chatbot
 
 	public String [] getQuestions()
 	{
-		return null;
+		return questions;
 	}
 	
 	public String[] getVerbs()

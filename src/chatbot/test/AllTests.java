@@ -1,4 +1,4 @@
-package chat.tests;
+package chatbot.test;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
