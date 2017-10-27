@@ -122,12 +122,12 @@ public class Chatbot
 	
 	public boolean movieTitleChecker(String title)
 	{
-		return false;
+		return true;
 	}
 	
 	public boolean movieGenreChecker(String genre)
 	{
-		return false;
+		return true;
 	}
 
 	public boolean quitChecker(String exitString)
