@@ -38,6 +38,7 @@ public class Chatbot
 		buildCuteAnimals();
 		//buildTopics();
 		//buildFollowups();
+		buildQuestions();
 		buildChatbotResponse();
 	}
 	
