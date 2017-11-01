@@ -22,6 +22,7 @@ public class ChatController
 	 while (chatbot.lengthChecker(response)&& !chatbot.quitChecker(response))
 	 {
 		 response = popupChat(response);
+		 response = display.collectResponse(response);
 	 }
 	}
 	
@@ -32,7 +33,11 @@ public class ChatController
 	
 	private String popupChat(String chat)
 	{
-		return null;
+		String chatbotSays ="";
+		
+		chatbotSays += chatbot.processConversation(chat);
+		
+		return chatbotSays;
 	}
 	
 	public Chatbot getChatbot()

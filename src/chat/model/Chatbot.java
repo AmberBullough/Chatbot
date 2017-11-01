@@ -75,8 +75,18 @@ public class Chatbot
 	
 	private void buildQuestions()
 	{
+		questions [0] = "What is your name?";
+		questions [1] = "How many people are in your family?";
+		questions [2] = "Which are cuter? Puppies or kittens?";
+		questions [3] = "Do you like badgers?";
+		questions [4] = "Am I a robot?";
+		questions [5] = "How much wood could a woodchuck chuck if a woodchuck could chuck chucked wood?";
+		questions [6] = "How many pickled peppers did Peter Piper pick?";
+		questions [7] = "Is this question false?";
+		questions [8] = "Are you there or are you square?";
+		questions [9] = "Is Wheatly your friend?";
+		questions [10] = "Which is heavier? 200 pounds of bricks? Or 200 pounds of feathers? Wouldn't it be feathers? Because you have to carry the weight of what you did to those poor birds, right?";
 		
-	
 	}
 	
 	public String processConversation(String input)
@@ -158,7 +168,12 @@ public class Chatbot
 
 	public boolean quitChecker(String exitString)
 	{
+		if (exitString.equalsIgnoreCase("quit"))
+		{
+			return true;
+		}
 		return false;
+
 	}
 
 	public boolean keyboardMashChecker(String sample)
