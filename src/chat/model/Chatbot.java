@@ -142,12 +142,12 @@ public class Chatbot
 	
 	public boolean contentChecker(String contentCheck)
 	{
-		return false;
+		return true;
 	}
 	
 	public boolean cuteAnimalMemeChecker(String input)
 	{
-		return false;
+		return true;
 	}
 	
 	public boolean shoppingListChecker(String shoppingItem)
@@ -177,7 +177,7 @@ public class Chatbot
 
 	public boolean keyboardMashChecker(String sample)
 	{
-		return false;
+		return true;
 	}
 	
 	public List<Movie> getMovieList()

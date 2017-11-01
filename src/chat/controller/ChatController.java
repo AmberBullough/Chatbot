@@ -49,7 +49,7 @@ public class ChatController
 		
 	}
 	
-	public PopupDisplay 
+	public PopupDisplay
 	{
 		
 	}
