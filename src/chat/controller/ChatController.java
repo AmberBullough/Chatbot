@@ -2,11 +2,15 @@ package chat.controller;
 
 import chat.model.Chatbot;
 import chat.view.PopupDisplay;
+import chat.tests.FrameTest;
+import chat.tests.ControllerTest;
+import chat.tests.AllTests;
+import chat.tests.ChatbotTest;
 
 public class ChatController 
 { 
 	private Chatbot chatbot;
-	private Chatframe appFrame;
+	//private Chatframe appFrame;
 	private PopupDisplay display;
 	
 	public ChatController() 
@@ -26,7 +30,7 @@ public class ChatController
 	 }
 	}
 	
-	public String intertWithChatbot(String input)
+	public String interactWithChatbot(String input)
 	{
 		
 	}
@@ -45,7 +49,7 @@ public class ChatController
 		
 	}
 	
-	public PopupDisplay getDisplay()
+	public PopupDisplay 
 	{
 		
 	}
