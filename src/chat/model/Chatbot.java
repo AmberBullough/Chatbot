@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Chatbot
 {
-	private List<String> movieList;
+	private List<Movie> movieList;
 	private List<String> shoppingList;
 	private List<String> cuteAnimalMemes;
 	private String [] verbs;
@@ -21,9 +21,9 @@ public class Chatbot
 	
 	public Chatbot(String username)
 	{
-		this.movieList = new ArrayList<String>();
+		this.movieList = new ArrayList<Movie>();
 		this.shoppingList = new ArrayList<String>();
-		this.cuteAnimalMemes = null;
+		this.cuteAnimalMemes = new ArrayList<String>();
 		this.currentTime = null;
 		this.questions = new String [10];
 		this.username = username;
@@ -93,7 +93,6 @@ public class Chatbot
 		shoppingList.add("veggies");
 		shoppingList.add("protein");
 		shoppingList.add("slug bait");
-		shoppingList.add("gross things");
 		
 	}
 	
@@ -184,7 +183,29 @@ public class Chatbot
 	
 	public boolean shoppingListChecker(String shoppingItem)
 	{
-		return true;
+		int num = 0;
+		while (num < 3)
+		{
+			if (shoppingList.contains("snacks"))
+			{
+				num+=1;
+			}
+			if (shoppingList.contains("veggies"))
+			{
+				num+=1;
+			}
+			if (shoppingList.contains("protein"))
+			{
+				num+=1;
+			}
+			return true;
+		}
+			if (shoppingList.contains("slug bait"))
+			{
+				return false;
+			}
+			
+			return false;
 	}
 	
 	public boolean movieTitleChecker(String title)

@@ -30,7 +30,11 @@ public class Movie
 
 	public String getGenre()
 	{
-		this.genre = "@@@@@@@";
+		this.genre = "Sci-Fi";
+		this.genre = "Horror";
+		this.genre = "Fantasy";
+		this.genre = "Animation";
+		this.genre = "Superheros";
 		return genre;
 	}
 
