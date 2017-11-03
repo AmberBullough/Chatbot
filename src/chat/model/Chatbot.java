@@ -36,9 +36,9 @@ public class Chatbot
 		buildVerbs();
 		buildShoppingList();
 		buildCuteAnimals();
-		//buildTopics();
-		//buildFollowups();
-		//buildQuestions();
+		buildTopics();
+		buildFollowups();
+		buildQuestions();
 		buildChatbotResponse();
 	}
 	
@@ -48,6 +48,27 @@ public class Chatbot
 		verbs [1] = "dislike";
 		verbs [2] = "am ambivalent about";
 		verbs [3] = "am thinking about";
+	}
+	
+	private void buildTopics()
+	{
+		topics [0] = "Movies";
+		topics [1] = "Animals";
+		topics [2] = "Robots";
+		topics [3] = "Family";
+		topics [4] = "Food";
+		topics [5] = "Songs";
+		topics [6] = "Riddles";
+	}
+	
+	private void buildFollowups()
+	{
+		followUps [0] = "";
+		followUps [1] = "";
+		followUps [2] = "";
+		followUps [3] = "";
+		followUps [4] = "";
+		
 	}
 
 	private void buildMovieList()	

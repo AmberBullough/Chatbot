@@ -44,7 +44,7 @@ public class ChatController
 		return chatbotSays;
 	}
 	
-	public Chatbot getChatbot()
+	public Chatbot testGetChatbot()
 	{
 		
 	}
@@ -54,7 +54,7 @@ public class ChatController
 		
 	}
 	
-	public ChatFrame getChatFrame()
+	public ChatFrame testGetChatFrame()
 	{
 	
 	}
