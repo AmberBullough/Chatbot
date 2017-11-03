@@ -3,10 +3,11 @@ package chat.model;
 import java.util.List;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Chatbot
 {
-	private List<Movie> movieList;
+	private List<String> movieList;
 	private List<String> shoppingList;
 	private List<String> cuteAnimalMemes;
 	private String [] verbs;
@@ -20,7 +21,7 @@ public class Chatbot
 	
 	public Chatbot(String username)
 	{
-		this.movieList = null;
+		this.movieList = new ArrayList<String>();
 		this.shoppingList = new ArrayList<String>();
 		this.cuteAnimalMemes = null;
 		this.currentTime = null;
@@ -40,6 +41,7 @@ public class Chatbot
 		buildFollowups();
 		buildQuestions();
 		buildChatbotResponse();
+		buildMovieList();
 	}
 	
 	private void buildVerbs()
@@ -73,7 +75,16 @@ public class Chatbot
 
 	private void buildMovieList()	
 	{
-		
+		movieList.add(new Movie(""));
+		movieList.add(new Movie("Star Wars: The Last Jedi"));
+		movieList.add(new Movie("Wonder Woman"));
+		movieList.add(new Movie("Thor Ragnorark"));
+		movieList.add(new Movie("It"));
+		movieList.add(new Movie("Transformers: The Last Knight"));
+		movieList.add(new Movie("Lego Batman Movie"));
+		movieList.add(new Movie("Coco"));
+		movieList.add(new Movie("The Beauty And The Beast"));
+		movieList.add(new Movie("Pirates Of The Caribbean: Dead Men Tell No Tales"));
 	}
 	
 	private void buildShoppingList()
