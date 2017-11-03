@@ -93,6 +93,6 @@ public class Movie
 	
 	public String toString()
 	{
-		return null;
+		return null; // Shout not be null
 	}
 }
