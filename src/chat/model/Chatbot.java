@@ -81,9 +81,9 @@ public class Chatbot
 		movieList.add(new Movie("Wonder Woman"));
 		movieList.add(new Movie("Thor Ragnorark"));
 		movieList.add(new Movie("It"));
-		movieList.add(new Movie("Transformers: The Last Knight"));
+		movieList.add(new Movie("Spiderman"));
 		movieList.add(new Movie("Lego Batman Movie"));
-		movieList.add(new Movie("Coco"));
+		movieList.add(new Movie("Hidden Figures"));
 		movieList.add(new Movie("The Beauty And The Beast"));
 		movieList.add(new Movie("Pirates Of The Caribbean: Dead Men Tell No Tales"));
 	}
