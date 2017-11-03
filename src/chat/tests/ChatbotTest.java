@@ -159,6 +159,7 @@ public class ChatbotTest
 	@Test
 	public void testGetCuteAnimalMemes()
 	{
+	
 		int otterCount = 0;
 		int flooferCount = 0;
 		int kittieCount = 0;
@@ -177,7 +178,7 @@ public class ChatbotTest
 				kittieCount += 1;
 			}
 		}
-		
+		assertFalse("Racist memes aren't cute" , testedChatbot.cuteAnimalMemeChecker("pepe"));
 		assertTrue("You must have at least one otter in your list", otterCount > 0 );
 		assertTrue("You must have at least one floofer in your list", flooferCount > 0 );
 		assertTrue("You must have at least one kittie in your list", kittieCount > 0 );

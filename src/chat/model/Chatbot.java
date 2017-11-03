@@ -42,6 +42,7 @@ public class Chatbot
 		buildQuestions();
 		buildChatbotResponse();
 		buildMovieList();
+		getUsername();
 	}
 	
 	private void buildVerbs()
@@ -178,8 +179,29 @@ public class Chatbot
 	
 	public boolean cuteAnimalMemeChecker(String input)
 	{
-		return true;
-	}
+		int otterCount = 0;
+		int flooferCount = 0;
+		int kittieCount = 0;
+		
+		for (String cute : getCuteAnimalMemes())
+		{
+			if (cute.toLowerCase().contains("otter"))
+			{
+				otterCount += 1;
+			}
+			if (cute.toUpperCase().contains("FLOOFER"))
+			{
+				flooferCount += 1;
+			}
+			if (cute.toLowerCase().indexOf("kittie") > -1)
+			{
+				kittieCount += 1;
+			}
+			return true;
+			}
+		return false;
+		}
+		
 	
 	public boolean shoppingListChecker(String shoppingItem)
 	{
