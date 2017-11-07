@@ -16,10 +16,10 @@ public class Movie
 	
 	public Movie(String title)
 	{
-		this.title = "";
+		this.title = "title";
 		this.genre = "Sci-Fi";
 		this.ratingMPAA = "G";
-		this.review = "";
+		this.review = "It was an amazing movie!";
 		this.length = -99;
 		this.releaseDate = null;
 		this.starScore = Double.NaN;
@@ -67,7 +67,12 @@ public class Movie
 
 	public void setTitle(String title)
 	{
-		
+	//	String genre = "temp";
+	//	testedMovie.setGenre(title);
+	//	if(testedMovie.getTitle().equals(title));
+	//	{
+	//		return title;
+	//	}
 	}
 
 	public void setGenre(String genre)
