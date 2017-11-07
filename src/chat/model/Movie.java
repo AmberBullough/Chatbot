@@ -1,6 +1,8 @@
 package chat.model;
 
 import java.time.LocalDate;
+import chat.tests.MovieTest;
+import chat.model.Chatbot;
 
 public class Movie
 {
@@ -15,9 +17,9 @@ public class Movie
 	public Movie(String title)
 	{
 		this.title = "";
-		this.genre = null;
-		this.ratingMPAA = null;
-		this.review = null;
+		this.genre = "Sci-Fi";
+		this.ratingMPAA = "G";
+		this.review = "";
 		this.length = -99;
 		this.releaseDate = null;
 		this.starScore = Double.NaN;
@@ -40,7 +42,7 @@ public class Movie
 
 	public String getRatingMPAA()
 	{
-		return null;
+		return ratingMPAA;
 	}
 
 	public String getReview()
