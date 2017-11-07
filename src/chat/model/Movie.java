@@ -16,13 +16,13 @@ public class Movie
 	
 	public Movie(String title)
 	{
-		this.title = "title";
+		this.title = "title: " + title;
 		this.genre = "Sci-Fi";
 		this.ratingMPAA = "G";
 		this.review = "It was an amazing movie!";
-		this.length = -99;
+		this.length = 120;
 		this.releaseDate = null;
-		this.starScore = Double.NaN;
+		this.starScore = 9.99;
 	}
 
 	public String getTitle()
@@ -52,7 +52,7 @@ public class Movie
 
 	public int getLength()
 	{
-		return -99999999;
+		return length;
 	}
 
 	public LocalDate getReleaseDate()
@@ -67,16 +67,13 @@ public class Movie
 
 	public void setTitle(String title)
 	{
-	//	String genre = "temp";
-	//	testedMovie.setGenre(title);
-	//	if(testedMovie.getTitle().equals(title));
-	//	{
-	//		return title;
-	//	}
+		
+		this.title = title;
 	}
 
 	public void setGenre(String genre)
 	{
+		this.genre = genre;
 	}
 
 	public void setRatingMPAA(String ratingMPAA)

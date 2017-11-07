@@ -80,7 +80,6 @@ public class Chatbot
 		movieList.add(new Movie("Star Wars: The Last Jedi"));
 		movieList.add(new Movie("Wonder Woman"));
 		movieList.add(new Movie("Thor Ragnorark"));
-		movieList.add(new Movie("It"));
 		movieList.add(new Movie("Spiderman"));
 		movieList.add(new Movie("Lego Batman Movie"));
 		movieList.add(new Movie("Hidden Figures"));
@@ -143,7 +142,12 @@ public class Chatbot
 		random = (int) (Math.random() * questions.length);
 		response += questions[random];
 		
-		
+		random = (int) (Math.random() * movieList.size());
+		if (random % 2 ==0)
+		{
+			random = (int) (Math.random()* movieList.size());
+			response += movieList.get(random).getTitle() + "is a great movie!";
+		}	
 		return response;
 		
 	}
