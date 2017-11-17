@@ -6,6 +6,7 @@ import chat.tests.FrameTest;
 import chat.tests.ControllerTest;
 import chat.tests.AllTests;
 import chat.tests.ChatbotTest;
+import chat.view.ChatFrame;
 
 public class ChatController 
 { 
@@ -32,7 +33,8 @@ public class ChatController
 	
 	public String interactWithChatbot(String input)
 	{
-		
+		String response = "What do you do?";
+			return response;
 	}
 	
 	private String popupChat(String chat)
@@ -46,17 +48,17 @@ public class ChatController
 	
 	public Chatbot getChatbot()
 	{
-		
+		return chatbot;
 	}
 	
 	public PopupDisplay getDisplay()
 	{
-		
+		return display;
 	}
 	
 	public ChatFrame GetChatFrame()
 	{
-	
+		
 	}
 	
 }
