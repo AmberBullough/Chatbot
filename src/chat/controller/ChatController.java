@@ -11,13 +11,14 @@ import chat.view.ChatFrame;
 public class ChatController 
 { 
 	private Chatbot chatbot;
-	//private Chatframe appFrame;
+	private ChatFrame appFrame;
 	private PopupDisplay display;
 	
 	public ChatController() 
 	{
 		chatbot = new Chatbot("Silly Chatbot");
 		display = new PopupDisplay();
+		appFrame = new ChatFrame();
 	}
 
 	public void start()
@@ -46,6 +47,23 @@ public class ChatController
 		return chatbotSays;
 	}
 	
+
+	public String useCheckers(String text)
+	{
+		String response = "";
+		if(chatbot.contentChecker(text))
+		{
+			response+= "This text matches the special content\n";
+		}
+		if (chatbot.cuteAnimalMemeChecker(text))
+		{
+			response += "";
+		}
+		//continue will all checkers except length and quit checker
+		
+		return response;
+		
+	}
 	public Chatbot getChatbot()
 	{
 		return chatbot;
@@ -56,9 +74,9 @@ public class ChatController
 		return display;
 	}
 	
-	public ChatFrame GetChatFrame()
+	public ChatFrame getChatFrame()
 	{
-		
+		return appFrame;
 	}
 	
 }
