@@ -9,7 +9,7 @@ public class ChatFrame extends JFrame
 	private ChatController baseController;
 	private ChatPanel firstPanel;
 	
-
+ 
 	public ChatFrame(ChatController baseController)
 	{
 		super();

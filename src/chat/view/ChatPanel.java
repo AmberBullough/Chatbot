@@ -46,7 +46,7 @@ public class ChatPanel extends JPanel
 		setupPanel();
 		setupLayout();
 		setupListeners();
-
+ 
 	}
 
 	/**
@@ -73,7 +73,7 @@ public class ChatPanel extends JPanel
 	/**
 	 * the constraint on the components on the Frame
 	 */
-	private void setupLayout()
+	private void ()
 	{
 		// TextArea
 		baseLayout.putConstraint(SpringLayout.WEST, inputField, 0, SpringLayout.WEST, chatArea);
@@ -139,7 +139,7 @@ public class ChatPanel extends JPanel
 		});
 	}
 
-	/**
+	/** 
 	 * A method to change the Background color of the Frame
 	 */
 	private void changeRandomColor()
