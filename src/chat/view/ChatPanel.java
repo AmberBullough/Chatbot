@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JComponent;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.JLabel;
 
 
 public class ChatPanel extends JPanel
@@ -23,6 +24,7 @@ public class ChatPanel extends JPanel
 	private SpringLayout baseLayout;
 	private JTextField inputField;
 	private JTextArea chatArea;
+	private JLabel infoLabel;
 
 	/**
 	 * Initializes GUI data members, also calling Panel, layout, and listeners methods
@@ -38,9 +40,12 @@ public class ChatPanel extends JPanel
 		exitButton = new JButton("Exit");
 		randomButton = new JButton("Random, Click me");
 		checkerButton = new JButton("check");
+		infoLabel = new JLabel(" Type to chat with the chatbot");
 		baseLayout = new SpringLayout();
+		
 
 		inputField = new JTextField(25);
+		
 		chatArea = new JTextArea(10, 25);
 
 		setupPanel();
@@ -61,7 +66,7 @@ public class ChatPanel extends JPanel
 		this.add(exitButton);
 		this.add(randomButton);
 		this.add(checkerButton);
-		
+		this.add(infoLabel);
 		//text area
 		this.add(inputField);
 		this.add(chatArea);
@@ -88,10 +93,17 @@ public class ChatPanel extends JPanel
 
 		// buttons
 		baseLayout.putConstraint(SpringLayout.SOUTH, chatButton, -34, SpringLayout.SOUTH, this);
-		baseLayout.putConstraint(SpringLayout.NORTH, randomButton, 0, SpringLayout.NORTH, exitButton);
 		baseLayout.putConstraint(SpringLayout.WEST, exitButton, 0, SpringLayout.WEST, chatButton);
 		baseLayout.putConstraint(SpringLayout.SOUTH, exitButton, -6, SpringLayout.NORTH, chatButton);
-		baseLayout.putConstraint(SpringLayout.WEST, randomButton, -5, SpringLayout.WEST, chatArea);
+		baseLayout.putConstraint(SpringLayout.NORTH, randomButton, 0, SpringLayout.NORTH, exitButton);
+		baseLayout.putConstraint(SpringLayout.EAST, randomButton, -6, SpringLayout.WEST, checkerButton);
+		baseLayout.putConstraint(SpringLayout.NORTH, checkerButton, 0, SpringLayout.NORTH, exitButton);
+		baseLayout.putConstraint(SpringLayout.EAST, checkerButton, 0, SpringLayout.EAST, inputField);
+		
+		//labels
+		baseLayout.putConstraint(SpringLayout.NORTH, infoLabel, 8, SpringLayout.SOUTH, inputField);
+		baseLayout.putConstraint(SpringLayout.WEST, infoLabel, 0, SpringLayout.WEST, inputField);
+		
 	}
 
 	/**

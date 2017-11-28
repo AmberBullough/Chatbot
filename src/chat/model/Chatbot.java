@@ -149,7 +149,7 @@ public class Chatbot
 			response += movieList.get(random).getTitle() + "is a great movie!";
 		}	
 		
-		int followup = (int) (ath.random() * 5);
+		int followup = (int) (Math.random() * 5);
 		switch(followup)
 		{
 		case 0:
