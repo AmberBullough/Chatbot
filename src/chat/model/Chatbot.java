@@ -148,6 +148,26 @@ public class Chatbot
 			random = (int) (Math.random()* movieList.size());
 			response += movieList.get(random).getTitle() + "is a great movie!";
 		}	
+		
+		int followup = (int) (ath.random() * 5);
+		switch(followup)
+		{
+		case 0:
+			response += followUps[0] + "\n";
+			break;
+		case 3: 
+			response += followUps[1]	+ "\n";
+			break;
+		case 1:
+			response +=followUps[2] + "\n";
+			break;
+		default:
+			response += followUps[4] + "\n";
+			response += followUps[3] + "\n";
+			break;
+		}
+		
+		
 		return response;
 		
 	}
