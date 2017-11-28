@@ -151,3 +151,6 @@ public class ChatPanel extends JPanel
 		this.setBackground(new Color(red, green, blue));
 	}
 }
+
+
+
