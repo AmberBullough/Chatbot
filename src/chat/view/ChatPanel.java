@@ -78,7 +78,7 @@ public class ChatPanel extends JPanel
 	/**
 	 * the constraint on the components on the Frame
 	 */
-	private void ()
+	private void setupLayout()
 	{
 		// TextArea
 		baseLayout.putConstraint(SpringLayout.WEST, inputField, 0, SpringLayout.WEST, chatArea);

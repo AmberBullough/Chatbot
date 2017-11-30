@@ -66,13 +66,14 @@ public class Chatbot
 	
 	private void buildFollowups()
 	{
-		followUps [0] = "";
-		followUps [1] = "";
-		followUps [2] = "";
-		followUps [3] = "";
-		followUps [4] = "";
+		followUps [0] = "What is your favorite movie?";
+		followUps [1] = "What do you need from the store?";
+		followUps [2] = "Who is in your family?";
+		followUps [3] = "What is your favorite animal?";
+		followUps [4] = "Sing me a song?";
 		
 	}
+
 
 	private void buildMovieList()	
 	{
@@ -188,7 +189,37 @@ public class Chatbot
 	
 	public boolean htmlTagChecker(String input)
 	{
-		return false;
+		boolean containsHTML = false;
+		if(input==null || !input.contains("<"))
+		{
+			return containsHTML;
+		}
+		int firstOpen = input.indexOf("<");
+		int firstClose = input.indexOf(">", firstOpen);
+		int secondOpen = -9;
+		int secondClose = -9;
+		String tagText = "";
+		
+		//Check bad tags
+		if (input.contains("<>") || input.indexOf("< >") > -1)
+				{
+					containsHTML = false;
+				}
+		
+		//Check singleton
+		if (input.toUpperCase().contains("<P>") || input.toLowerCase().contains("<br>"))
+				{
+					containsHTML = true;
+				}
+		
+		//checks others
+		else if (firstClose > firstOpen)
+		{
+			// Others
+				tagText = input.substring(firstOpen +1. firstClose).toLowerCase()
+						secondOpen =input.toLowerCase().indexOf("</" + tagText,firstClose);
+		}
+		
 	}
 	
 	public boolean userNameChecker(String input)

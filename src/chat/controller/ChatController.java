@@ -18,7 +18,7 @@ public class ChatController
 	{
 		chatbot = new Chatbot("Silly Chatbot");
 		display = new PopupDisplay();
-		appFrame = new ChatFrame();
+		appFrame = new ChatFrame(this);
 	}
 
 	public void start()
