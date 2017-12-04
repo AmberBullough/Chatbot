@@ -216,8 +216,8 @@ public class Chatbot
 		else if (firstClose > firstOpen)
 		{
 			// Others
-				tagText = input.substring(firstOpen +1. firstClose).toLowerCase()
-						secondOpen =input.toLowerCase().indexOf("</" + tagText,firstClose);
+				tagText = input.substring(firstOpen +1. firstClose).toLowerCase();
+				secondOpen = input.toLowerCase().indexOf("</" + tagText,firstClose);
 		}
 		
 	}
