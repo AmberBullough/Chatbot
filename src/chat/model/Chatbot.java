@@ -41,7 +41,7 @@ public class Chatbot
 		buildTopics();
 		buildFollowups();
 		buildQuestions();
-		buildChatbotResponse();
+		
 		buildMovieList();
 		getUsername();
 	}
