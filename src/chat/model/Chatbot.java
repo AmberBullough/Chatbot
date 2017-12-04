@@ -189,7 +189,7 @@ public class Chatbot
 		return validLength;
 	}
 	
-	public boolean htmlTagChecker(String input)
+	public boolean inputHTMLChecker(String input)
 	{
 		boolean containsHTML = false;
 		if(input==null || !input.contains("<"))
@@ -218,12 +218,12 @@ public class Chatbot
 		else if (firstClose > firstOpen)
 		{
 			// Others
-				tagText = input.substring(firstOpen +1. firstClose).toLowerCase();
+				tagText = input.substring(firstOpen +1, firstClose).toLowerCase();
 				secondOpen = input.toLowerCase().indexOf("</" + tagText,firstClose);
 		}
 		
 		
-		
+		return containsHTML;
 	}
 	
 	public boolean userNameChecker(String input)

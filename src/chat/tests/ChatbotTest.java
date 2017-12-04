@@ -65,14 +65,14 @@ public class ChatbotTest
 	@Test
 	public void testHtmlTagChecker()
 	{
-		assertFalse("Invalid tag fail", testedChatbot.htmlTagChecker("<>"));
-		assertFalse("Invalid tag fail", testedChatbot.htmlTagChecker("< >"));
-		assertTrue("Valid tag fail", testedChatbot.htmlTagChecker("<B>  </B>"));
-		assertFalse("Incomplete tag fail - closing tag not found", testedChatbot.htmlTagChecker("<B>  "));
-		assertTrue("Valid tag fail", testedChatbot.htmlTagChecker("<I> sdadas </i>"));
-		assertTrue("Valid tag fail - no closing P needed", testedChatbot.htmlTagChecker("<P>"));
-		assertTrue("Valid tag fail", testedChatbot.htmlTagChecker("<A HREF=\"sdfs.html\"> </a>"));
-		assertFalse("Incomplete tag fail - no = for the linked file", testedChatbot.htmlTagChecker("<A HREF> </a>"));
+		assertFalse("Invalid tag fail", testedChatbot.inputHTMLChecker("<>"));
+		assertFalse("Invalid tag fail", testedChatbot.inputHTMLChecker("< >"));
+		assertTrue("Valid tag fail", testedChatbot.inputHTMLChecker("<B>  </B>"));
+		assertFalse("Incomplete tag fail - closing tag not found", testedChatbot.inputHTMLChecker("<B>  "));
+		assertTrue("Valid tag fail", testedChatbot.inputHTMLChecker("<I> sdadas </i>"));
+		assertTrue("Valid tag fail - no closing P needed", testedChatbot.inputHTMLChecker("<P>"));
+		assertTrue("Valid tag fail", testedChatbot.inputHTMLChecker("<A HREF=\"sdfs.html\"> </a>"));
+		assertFalse("Incomplete tag fail - no = for the linked file", testedChatbot.inputHTMLChecker("<A HREF> </a>"));
 	}
 
 	@Test
