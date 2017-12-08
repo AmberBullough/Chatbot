@@ -64,7 +64,9 @@ public class Chatbot
 		topics [5] = "Songs";
 		topics [6] = "Riddles";
 	}
-	
+	/**
+	 * Gives question topics to talk about
+	 */
 	private void buildFollowups()
 	{
 		followUps [0] = "What is your favorite movie?" + "\n";
@@ -75,7 +77,9 @@ public class Chatbot
 		
 	}
 
-
+	/**
+	 * Gives the movies it knows
+	 */
 	private void buildMovieList()	
 	{
 		movieList.add(new Movie("Your favorite movie "));
@@ -89,6 +93,9 @@ public class Chatbot
 		movieList.add(new Movie("Pirates Of The Caribbean: Dead Men Tell No Tales "));
 	}
 	
+	/**
+	 * Tells about things in a shopping list
+	 */
 	private void buildShoppingList()
 	{
 		shoppingList.add("snacks");
@@ -98,6 +105,9 @@ public class Chatbot
 		
 	}
 	
+	/**
+	 * talks about animals
+	 */
 	private void buildCuteAnimals()
 	{
 		cuteAnimalMemes.add("pupper");
@@ -106,6 +116,9 @@ public class Chatbot
 		cuteAnimalMemes.add("FLOOFER");
 	}
 	
+	/** 
+	 * Asks questions
+	 */
 	private void buildQuestions()
 	{
 		questions [0] = "What is your name?" + "\n";
@@ -121,6 +134,9 @@ public class Chatbot
 		
 	}
 	
+	/**
+	 * Takes the conversation and builds the response
+	 */
 	public String processConversation(String input)
 	{
 		String chatbotResponse = "";
@@ -177,6 +193,11 @@ public class Chatbot
 		
 	}
 	
+	/** 
+	 * 
+	 * @param input
+	 * @return
+	 */
 	public boolean lengthChecker(String input)
 	{
 		boolean validLength = false;
