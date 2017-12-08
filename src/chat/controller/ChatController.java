@@ -35,7 +35,15 @@ public class ChatController
 	public String interactWithChatbot(String input)
 	{
 		String response = "What do you do?";
-			return response;
+		
+		if (chatbot.quitChecker(input))
+		{
+			close();
+		}
+	
+		response += "\n" + chatbot.processConversation(input);
+
+		return response;
 	}
 	
 	private String popupChat(String chat)
@@ -64,6 +72,12 @@ public class ChatController
 		return response;
 		
 	}
+	
+	private void close()
+	{
+		System.exit(0);
+	}
+	
 	public Chatbot getChatbot()
 	{
 		return chatbot;

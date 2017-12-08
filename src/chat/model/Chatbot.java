@@ -303,9 +303,12 @@ public class Chatbot
 
 	public boolean quitChecker(String exitString)
 	{
-		if (exitString.equalsIgnoreCase("quit"))
+		if(lengthChecker(exitString) == true)
 		{
-			return true;
+			if (exitString.equalsIgnoreCase("quit"))
+			{
+				return true;
+			}
 		}
 		return false;
 

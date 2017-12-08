@@ -45,12 +45,22 @@ public class ChatPanel extends JPanel
 		checkerButton = new JButton("check");
 		infoLabel = new JLabel(" Type to chat with the chatbot");
 		baseLayout = new SpringLayout();
+		baseLayout.putConstraint(SpringLayout.SOUTH, exitButton, -7, SpringLayout.NORTH, chatButton);
+		baseLayout.putConstraint(SpringLayout.NORTH, randomButton, 0, SpringLayout.NORTH, exitButton);
+		baseLayout.putConstraint(SpringLayout.WEST, randomButton, 43, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.EAST, chatButton, 0, SpringLayout.EAST, exitButton);
+		baseLayout.putConstraint(SpringLayout.NORTH, checkerButton, 0, SpringLayout.NORTH, exitButton);
+		baseLayout.putConstraint(SpringLayout.EAST, checkerButton, -6, SpringLayout.WEST, exitButton);
 		//init the scrollpane
 		chatScrollPane = new JScrollPane();
+		baseLayout.putConstraint(SpringLayout.EAST, exitButton, 0, SpringLayout.EAST, chatScrollPane);
 		
 		
 
 		inputField = new JTextField(25);
+		baseLayout.putConstraint(SpringLayout.NORTH, inputField, 237, SpringLayout.NORTH, this);
+		baseLayout.putConstraint(SpringLayout.SOUTH, inputField, -34, SpringLayout.SOUTH, this);
+		baseLayout.putConstraint(SpringLayout.NORTH, chatButton, 1, SpringLayout.NORTH, inputField);
 		
 		
 		chatArea = new JTextArea(10, 25);
@@ -88,8 +98,7 @@ public class ChatPanel extends JPanel
 		this.add(infoLabel);
 		//text area
 		this.add(inputField);
-		this.add(chatArea);
-		chatArea.setEnabled(false);
+		chatArea.setEnabled(true);
 		chatArea.setEditable(false);
 
 	}
@@ -101,23 +110,9 @@ public class ChatPanel extends JPanel
 	{
 		// TextArea
 		baseLayout.putConstraint(SpringLayout.WEST, inputField, 0, SpringLayout.WEST, chatArea);
-		baseLayout.putConstraint(SpringLayout.EAST, chatButton, 0, SpringLayout.EAST, chatArea);
 		baseLayout.putConstraint(SpringLayout.NORTH, chatScrollPane, 20, SpringLayout.NORTH, this);
 		baseLayout.putConstraint(SpringLayout.WEST, chatScrollPane, 25, SpringLayout.WEST, this);
 		baseLayout.putConstraint(SpringLayout.EAST, chatScrollPane, -25, SpringLayout.EAST, this);
-
-		// TextField
-		baseLayout.putConstraint(SpringLayout.NORTH, inputField, 0, SpringLayout.NORTH, chatButton);
-		baseLayout.putConstraint(SpringLayout.SOUTH, inputField, 0, SpringLayout.SOUTH, chatButton);
-
-		// buttons
-		baseLayout.putConstraint(SpringLayout.SOUTH, chatButton, -34, SpringLayout.SOUTH, this);
-		baseLayout.putConstraint(SpringLayout.WEST, exitButton, 0, SpringLayout.WEST, chatButton);
-		baseLayout.putConstraint(SpringLayout.SOUTH, exitButton, -6, SpringLayout.NORTH, chatButton);
-		baseLayout.putConstraint(SpringLayout.NORTH, randomButton, 0, SpringLayout.NORTH, exitButton);
-		baseLayout.putConstraint(SpringLayout.EAST, randomButton, -6, SpringLayout.WEST, checkerButton);
-		baseLayout.putConstraint(SpringLayout.NORTH, checkerButton, 0, SpringLayout.NORTH, exitButton);
-		baseLayout.putConstraint(SpringLayout.EAST, checkerButton, 0, SpringLayout.EAST, inputField);
 		
 		//labels
 		baseLayout.putConstraint(SpringLayout.NORTH, infoLabel, 8, SpringLayout.SOUTH, inputField);
