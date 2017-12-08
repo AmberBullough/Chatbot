@@ -67,26 +67,26 @@ public class Chatbot
 	
 	private void buildFollowups()
 	{
-		followUps [0] = "What is your favorite movie?";
-		followUps [1] = "What do you need from the store?";
-		followUps [2] = "Who is in your family?";
-		followUps [3] = "What is your favorite animal?";
-		followUps [4] = "Sing me a song?";
+		followUps [0] = "What is your favorite movie?" + "\n";
+		followUps [1] = "What do you need from the store?" + "\n";
+		followUps [2] = "Who is in your family?" + "\n";
+		followUps [3] = "What is your favorite animal?" + "\n";
+		followUps [4] = "Sing me a song?" + "\n";
 		
 	}
 
 
 	private void buildMovieList()	
 	{
-		movieList.add(new Movie(""));
-		movieList.add(new Movie("Star Wars: The Last Jedi"));
-		movieList.add(new Movie("Wonder Woman"));
-		movieList.add(new Movie("Thor Ragnorark"));
-		movieList.add(new Movie("Spiderman"));
-		movieList.add(new Movie("Lego Batman Movie"));
-		movieList.add(new Movie("Hidden Figures"));
-		movieList.add(new Movie("The Beauty And The Beast"));
-		movieList.add(new Movie("Pirates Of The Caribbean: Dead Men Tell No Tales"));
+		movieList.add(new Movie("Your favorite movie "));
+		movieList.add(new Movie("Star Wars: The Last Jedi "));
+		movieList.add(new Movie("Wonder Woman "));
+		movieList.add(new Movie("Thor Ragnorark "));
+		movieList.add(new Movie("Spiderman "));
+		movieList.add(new Movie("Lego Batman Movie "));
+		movieList.add(new Movie("Hidden Figures "));
+		movieList.add(new Movie("The Beauty And The Beast "));
+		movieList.add(new Movie("Pirates Of The Caribbean: Dead Men Tell No Tales "));
 	}
 	
 	private void buildShoppingList()
@@ -108,16 +108,16 @@ public class Chatbot
 	
 	private void buildQuestions()
 	{
-		questions [0] = "What is your name?";
-		questions [1] = "Which are cuter? Puppies or kittens?";
-		questions [2] = "Do you like badgers?";
-		questions [3] = "Am I a robot?";
-		questions [4] = "How much wood could a woodchuck chuck if a woodchuck could chuck chucked wood?";
-		questions [5] = "How many pickled peppers did Peter Piper pick?";
-		questions [6] = "Is this question false?";
-		questions [7] = "Are you there or are you square?";
-		questions [8] = "Is Wheatly your friend?";
-		questions [9] = "Which is heavier? 200 pounds of bricks? Or 200 pounds of feathers?"+ "\n" + "Wouldn't it be feathers? Because you have to carry the weight of what you did to those poor birds, right?";
+		questions [0] = "What is your name?" + "\n";
+		questions [1] = "Which are cuter? Puppies or kittens?" + "\n";
+		questions [2] = "Do you like badgers?" + "\n";
+		questions [3] = "Am I a robot?" + "\n";
+		questions [4] = "How much wood could a woodchuck chuck if a woodchuck could chuck chucked wood?" + "\n";
+		questions [5] = "How many pickled peppers did Peter Piper pick?" + "\n";
+		questions [6] = "Is this question false?" + "\n";
+		questions [7] = "Are you there or are you square?" + "\n";
+		questions [8] = "Is Wheatly your friend?" + "\n";
+		questions [9] = "Which is heavier? 200 pounds of bricks? Or 200 pounds of feathers?"+ "\n" + "Wouldn't it be feathers?" + "\n" + "Because you have to carry the weight of what you did to those poor birds, right?";
 		
 	}
 	
@@ -151,7 +151,7 @@ public class Chatbot
 		if (random % 2 ==0)
 		{
 			random = (int) (Math.random()* movieList.size());
-			response += movieList.get(random).getTitle() + "is a great movie!";
+			response += movieList.get(random).getTitle() + "is a great movie!" + "\n";
 		}	
 		
 		int followup = (int) (Math.random() * 5);

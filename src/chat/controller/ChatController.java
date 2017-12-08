@@ -23,7 +23,7 @@ public class ChatController
 
 	public void start()
 	{
-	 String response = display.collectResponse("What do you want to talk about?");
+	 String response = display.collectResponse("What do you want to talk about?" + "\n");
 	 
 	 while (chatbot.lengthChecker(response)&& !chatbot.quitChecker(response))
 	 {

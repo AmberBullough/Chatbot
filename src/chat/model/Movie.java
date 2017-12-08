@@ -16,7 +16,7 @@ public class Movie
 	
 	public Movie(String title)
 	{
-		this.title = "title: " + title;
+		this.title = title;
 		this.genre = "Sci-Fi";
 		this.ratingMPAA = "G";
 		this.review = "It was an amazing movie!";
