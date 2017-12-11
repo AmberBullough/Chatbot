@@ -146,8 +146,6 @@ public class Chatbot
 		chatbotResponse += "You said: " + "\n" + input + "\n";
 		chatbotResponse += buildChatbotResponse();
 		
-	
-		
 		return chatbotResponse;
 	}
 	private String buildChatbotResponse()
