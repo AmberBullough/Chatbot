@@ -7,16 +7,19 @@ import chat.tests.ControllerTest;
 import chat.tests.AllTests;
 import chat.tests.ChatbotTest;
 import chat.view.ChatFrame;
+import chat.model.CTECTwitter;
 
 public class ChatController 
 { 
 	private Chatbot chatbot;
 	private ChatFrame appFrame;
 	private PopupDisplay display;
+	private CTECTwitter myTwitter;
 	
 	public ChatController() 
 	{
 		chatbot = new Chatbot("Silly Chatbot");
+		myTwitter = new CTECTwitter(this);
 		display = new PopupDisplay();
 		appFrame = new ChatFrame(this);
 	}
@@ -92,5 +95,12 @@ public class ChatController
 	{
 		return appFrame;
 	}
-	
+	public void handleErrors(Exception error)
+	{
+		display.displayText(error.getMessage());
+	}
+	public void tweet(String text)
+	{
+		myTwitter.sendTweet(text);
+	}
 }
