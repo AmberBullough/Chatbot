@@ -112,8 +112,8 @@ public class ChatPanel extends JPanel
 		//this.add(exitButton);
 		//this.add(randomButton);
 		//this.add(checkerButton);
-		//this.add(chatScrollPane);
-		//this.add(infoLabel);
+		this.add(chatScrollPane);
+		this.add(infoLabel);
 		this.add(tweetButton);
 		this.add(loadButton_1);
 		this.add(saveButton);
@@ -185,6 +185,14 @@ public class ChatPanel extends JPanel
 			public void actionPerformed(ActionEvent click)
 			{
 				changeRandomColor();
+			}
+		});
+		
+		tweetButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				
 			}
 		});
 	}
