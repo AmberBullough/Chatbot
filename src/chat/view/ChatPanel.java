@@ -18,6 +18,10 @@ import javax.swing.JScrollPane;
 public class ChatPanel extends JPanel
 {
 	private ChatController baseController;
+	private JButton searchButton;
+	private JButton saveButton;
+	private JButton loadButton;
+	private JButton tweetButton;
 	private JButton chatButton;
 	private JButton checkerButton;
 	private JButton exitButton;
@@ -96,10 +100,13 @@ public class ChatPanel extends JPanel
 		this.add(checkerButton);
 		this.add(chatScrollPane);
 		this.add(infoLabel);
+		this.add(tweetButton);
 		//text area
 		this.add(inputField);
 		chatArea.setEnabled(true);
 		chatArea.setEditable(false);
+		
+	
 
 	}
 

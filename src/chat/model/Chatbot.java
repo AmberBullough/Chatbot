@@ -193,8 +193,7 @@ public class Chatbot
 	
 	/** 
 	 * 
-	 * @param input
-	 * @return
+	 * Checks to see how long a list is
 	 */
 	public boolean lengthChecker(String input)
 	{
@@ -209,7 +208,10 @@ public class Chatbot
 		}
 		return validLength;
 	}
-	
+	/**
+	 * 
+	 * Checks HTML
+	 */
 	public boolean inputHTMLChecker(String input)
 	{
 		boolean containsHTML = false;
