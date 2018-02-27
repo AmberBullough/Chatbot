@@ -23,7 +23,7 @@ public class CTECTwitter
 	{
 		try
 		{
-			chatbotTwitter.updateStatus("I just tweeted from my Java Chatbot program! #APCSRocks @CTECNow Thanks @cscheerleader & @codyhenrichsen! Amber Bullough");
+			//chatbotTwitter.updateStatus("I just tweeted from my Java Chatbot program! #APCSRocks @CTECNow Thanks @cscheerleader & @codyhenrichsen! Amber Bullough");
 
 			chatbotTwitter.updateStatus(textToTweet + " @ChatbotCTEC");
 		}
