@@ -23,14 +23,14 @@ public class ChatPanel extends JPanel
 	private JButton saveButton;
 	private JButton loadButton;
 	private JButton tweetButton;
-	private JButton chatButton;
-	private JButton checkerButton;
-	private JButton exitButton;
-	private JButton randomButton;
+	//private JButton chatButton;
+	//private JButton checkerButton;
+	//private JButton exitButton;
+	//private JButton randomButton;
 	private SpringLayout baseLayout;
 	private JTextField inputField;
-	private JTextArea chatArea;
-	private JLabel infoLabel;
+	//private JTextArea chatArea;
+	//private JLabel infoLabel;
 	//Need a datamemeber for the scrollpane
 	private JScrollPane chatScrollPane;
 
@@ -64,15 +64,15 @@ public class ChatPanel extends JPanel
 		baseLayout.putConstraint(SpringLayout.EAST, loadButton, -346, SpringLayout.EAST, this);
 		baseLayout.putConstraint(SpringLayout.SOUTH, saveButton, 89, SpringLayout.NORTH, this);
 		baseLayout.putConstraint(SpringLayout.NORTH, saveButton, 10, SpringLayout.NORTH, this);
-		baseLayout.putConstraint(SpringLayout.NORTH, randomButton, 0, SpringLayout.NORTH, exitButton);
-		baseLayout.putConstraint(SpringLayout.EAST, randomButton, -6, SpringLayout.WEST, checkerButton);
-		baseLayout.putConstraint(SpringLayout.SOUTH, exitButton, -7, SpringLayout.NORTH, chatButton);
-		baseLayout.putConstraint(SpringLayout.EAST, chatButton, 0, SpringLayout.EAST, exitButton);
-		baseLayout.putConstraint(SpringLayout.NORTH, checkerButton, 0, SpringLayout.NORTH, exitButton);
-		baseLayout.putConstraint(SpringLayout.EAST, checkerButton, -6, SpringLayout.WEST, exitButton);
+		//baseLayout.putConstraint(SpringLayout.NORTH, randomButton, 0, SpringLayout.NORTH, exitButton);
+		//baseLayout.putConstraint(SpringLayout.EAST, randomButton, -6, SpringLayout.WEST, checkerButton);
+		//baseLayout.putConstraint(SpringLayout.SOUTH, exitButton, -7, SpringLayout.NORTH, chatButton);
+		//baseLayout.putConstraint(SpringLayout.EAST, chatButton, 0, SpringLayout.EAST, exitButton);
+		//baseLayout.putConstraint(SpringLayout.NORTH, checkerButton, 0, SpringLayout.NORTH, exitButton);
+		//baseLayout.putConstraint(SpringLayout.EAST, checkerButton, -6, SpringLayout.WEST, exitButton);
 		//init the scrollpane
 		chatScrollPane = new JScrollPane();
-		baseLayout.putConstraint(SpringLayout.EAST, exitButton, 0, SpringLayout.EAST, chatScrollPane);
+		//baseLayout.putConstraint(SpringLayout.EAST, exitButton, 0, SpringLayout.EAST, chatScrollPane);
 		
 		
 
@@ -81,10 +81,10 @@ public class ChatPanel extends JPanel
 		baseLayout.putConstraint(SpringLayout.SOUTH, loadButton, -60, SpringLayout.NORTH, inputField);
 		baseLayout.putConstraint(SpringLayout.NORTH, inputField, 237, SpringLayout.NORTH, this);
 		baseLayout.putConstraint(SpringLayout.SOUTH, inputField, -34, SpringLayout.SOUTH, this);
-		baseLayout.putConstraint(SpringLayout.NORTH, chatButton, 1, SpringLayout.NORTH, inputField);
+		//baseLayout.putConstraint(SpringLayout.NORTH, chatButton, 1, SpringLayout.NORTH, inputField);
 		
 		
-		chatArea = new JTextArea(10, 25);
+		//chatArea = new JTextArea(10, 25);
 		//call new helper method
 		
 		setupScrollPane();
@@ -97,7 +97,7 @@ public class ChatPanel extends JPanel
 	
 	private void setupScrollPane() 
 	{
-		chatScrollPane.setViewportView(chatArea);
+	//	chatScrollPane.setViewportView(chatArea);
 		chatScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		chatScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 		
@@ -123,8 +123,8 @@ public class ChatPanel extends JPanel
 		this.add(searchButton);
 		//text area
 		this.add(inputField);
-		chatArea.setEnabled(true);
-		chatArea.setEditable(false);
+		//chatArea.setEnabled(true);
+		//chatArea.setEditable(false);
 		
 	
 
@@ -136,14 +136,14 @@ public class ChatPanel extends JPanel
 	private void setupLayout()
 	{
 		// TextArea
-		baseLayout.putConstraint(SpringLayout.WEST, inputField, 0, SpringLayout.WEST, chatArea);
+		//baseLayout.putConstraint(SpringLayout.WEST, inputField, 0, SpringLayout.WEST, chatArea);
 		baseLayout.putConstraint(SpringLayout.NORTH, chatScrollPane, 20, SpringLayout.NORTH, this);
 		baseLayout.putConstraint(SpringLayout.WEST, chatScrollPane, 25, SpringLayout.WEST, this);
 		baseLayout.putConstraint(SpringLayout.EAST, chatScrollPane, -25, SpringLayout.EAST, this);
 		
 		//labels
-		baseLayout.putConstraint(SpringLayout.NORTH, infoLabel, 8, SpringLayout.SOUTH, inputField);
-		baseLayout.putConstraint(SpringLayout.WEST, infoLabel, 0, SpringLayout.WEST, inputField);
+		//baseLayout.putConstraint(SpringLayout.NORTH, infoLabel, 8, SpringLayout.SOUTH, inputField);
+		//baseLayout.putConstraint(SpringLayout.WEST, infoLabel, 0, SpringLayout.WEST, inputField);
 		
 	}
 
@@ -152,44 +152,44 @@ public class ChatPanel extends JPanel
 	 */
 	private void setupListeners()
 	{
-		chatButton.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent click)
-			{
-				String userText = inputField.getText();
-				String displayText = baseController.interactWithChatbot(userText);
-				chatArea.append(displayText);
-				inputField.setText("");
-			}
-		});
-
-		checkerButton.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent click)
-			{
-				String userText = inputField.getText();
-				String displayText = baseController.useCheckers(userText);
-				chatArea.append(displayText);
-				inputField.setText("");
-			}
-		});
-
-		exitButton.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent click)
-			{
-				changeRandomColor();
-			}
-
-		});
-
-		randomButton.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent click)
-			{
-				changeRandomColor();
-			}
-		});
+//		chatButton.addActionListener(new ActionListener()
+//		{
+//			public void actionPerformed(ActionEvent click)
+//			{
+//				String userText = inputField.getText();
+//				String displayText = baseController.interactWithChatbot(userText);
+//				chatArea.append(displayText);
+//				inputField.setText("");
+//			}
+//		});
+//
+//		checkerButton.addActionListener(new ActionListener()
+//		{
+//			public void actionPerformed(ActionEvent click)
+//			{
+//				String userText = inputField.getText();
+//				String displayText = baseController.useCheckers(userText);
+//				chatArea.append(displayText);
+//				inputField.setText("");
+//			}
+//		});
+//
+//		exitButton.addActionListener(new ActionListener()
+//		{
+//			public void actionPerformed(ActionEvent click)
+//			{
+//				changeRandomColor();
+//			}
+//
+//		});
+//
+//		randomButton.addActionListener(new ActionListener()
+//		{
+//			public void actionPerformed(ActionEvent click)
+//			{
+//				changeRandomColor();
+//			}
+//		});
 		
 		tweetButton.addActionListener(new ActionListener()
 		{

@@ -26,13 +26,15 @@ public class ChatController
 
 	public void start()
 	{
-	 String response = display.collectResponse("What do you want to talk about?" + "\n");
-	 
-	 while (chatbot.lengthChecker(response)&& !chatbot.quitChecker(response))
-	 {
-		 response = popupChat(response);
-		 response = display.collectResponse(response);
-	 }
+		String results = IOController.loadFromFile(this, "commonWords.txt");
+		IOController.saveToFile(this,results, "readText.txt" );
+//	 String response = display.collectResponse("What do you want to talk about?" + "\n");
+//	 
+//	 while (chatbot.lengthChecker(response)&& !chatbot.quitChecker(response))
+//	 {
+//		 response = popupChat(response);
+//		 response = display.collectResponse(response);
+//	 }
 	}
 	
 	public String interactWithChatbot(String input)
