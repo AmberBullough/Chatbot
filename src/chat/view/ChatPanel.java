@@ -54,7 +54,8 @@ public class ChatPanel extends JPanel
 		//checkerButton = new JButton("check");
 		//infoLabel = new JLabel(" Type to chat with the chatbot");
 		baseLayout = new SpringLayout();
-		baseLayout.putConstraint(SpringLayout.WEST, tweetButton, 293, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.WEST, tweetButton, 217, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.EAST, tweetButton, 377, SpringLayout.WEST, this);
 		baseLayout.putConstraint(SpringLayout.NORTH, searchButton, 9, SpringLayout.NORTH, saveButton);
 		baseLayout.putConstraint(SpringLayout.WEST, searchButton, 6, SpringLayout.EAST, saveButton);
 		baseLayout.putConstraint(SpringLayout.WEST, saveButton, 0, SpringLayout.WEST, this);
@@ -77,11 +78,13 @@ public class ChatPanel extends JPanel
 		
 
 		inputField = new JTextField(25);
+		baseLayout.putConstraint(SpringLayout.NORTH, tweetButton, -139, SpringLayout.NORTH, inputField);
+		baseLayout.putConstraint(SpringLayout.WEST, chatButton, 6, SpringLayout.EAST, inputField);
+		baseLayout.putConstraint(SpringLayout.SOUTH, chatButton, 0, SpringLayout.SOUTH, inputField);
 		baseLayout.putConstraint(SpringLayout.SOUTH, tweetButton, 0, SpringLayout.NORTH, inputField);
 		baseLayout.putConstraint(SpringLayout.SOUTH, loadButton, -60, SpringLayout.NORTH, inputField);
 		baseLayout.putConstraint(SpringLayout.NORTH, inputField, 237, SpringLayout.NORTH, this);
 		baseLayout.putConstraint(SpringLayout.SOUTH, inputField, -34, SpringLayout.SOUTH, this);
-		baseLayout.putConstraint(SpringLayout.NORTH, chatButton, 1, SpringLayout.NORTH, inputField);
 		
 		
 		chatArea = new JTextArea(10, 25);
