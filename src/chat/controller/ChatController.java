@@ -51,7 +51,7 @@ public class ChatController
 		return response;
 	}
 	
-	private String popupChat(String chat)
+	/*private String popupChat(String chat)
 	{
 		String chatbotSays =""; //Assigns a valid value to a variable that will be returned for the method.
 		
@@ -61,7 +61,7 @@ public class ChatController
 	}
 	
 
-	public String useCheckers(String text)
+/*	public String useCheckers(String text)
 	{
 		String response = "";
 		if(chatbot.contentChecker(text))
@@ -77,11 +77,12 @@ public class ChatController
 		return response;
 		
 	}
-	
+	*/
 	private void close()
 	{
 		System.exit(0);
 	}
+	
 	
 	public Chatbot getChatbot()
 	{
@@ -104,5 +105,9 @@ public class ChatController
 	public void tweet(String text)
 	{
 		myTwitter.sendTweet(text);
+	}
+	public String search(String text)
+	{
+		return myTwitter.getMostCommonWord(text);
 	}
 }

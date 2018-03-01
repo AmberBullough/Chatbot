@@ -23,13 +23,13 @@ public class ChatPanel extends JPanel
 	private JButton saveButton;
 	private JButton loadButton;
 	private JButton tweetButton;
-	//private JButton chatButton;
+	private JButton chatButton;
 	//private JButton checkerButton;
 	//private JButton exitButton;
 	//private JButton randomButton;
 	private SpringLayout baseLayout;
 	private JTextField inputField;
-	//private JTextArea chatArea;
+	private JTextArea chatArea;
 	//private JLabel infoLabel;
 	//Need a datamemeber for the scrollpane
 	private JScrollPane chatScrollPane;
@@ -48,7 +48,7 @@ public class ChatPanel extends JPanel
 		saveButton = new JButton("save", new ImageIcon(getClass().getResource("/chat/view/images/save.png")));
 		loadButton = new JButton("load", new ImageIcon(getClass().getResource("/chat/view/images/load.png")));
 		tweetButton = new JButton("tweet", new ImageIcon(getClass().getResource("/chat/view/images/twitter.png")));
-		//chatButton = new JButton("chat");
+		chatButton = new JButton("Chat");
 		//exitButton = new JButton("Exit");
 		//randomButton = new JButton("Random, Click me");
 		//checkerButton = new JButton("check");
@@ -81,10 +81,10 @@ public class ChatPanel extends JPanel
 		baseLayout.putConstraint(SpringLayout.SOUTH, loadButton, -60, SpringLayout.NORTH, inputField);
 		baseLayout.putConstraint(SpringLayout.NORTH, inputField, 237, SpringLayout.NORTH, this);
 		baseLayout.putConstraint(SpringLayout.SOUTH, inputField, -34, SpringLayout.SOUTH, this);
-		//baseLayout.putConstraint(SpringLayout.NORTH, chatButton, 1, SpringLayout.NORTH, inputField);
+		baseLayout.putConstraint(SpringLayout.NORTH, chatButton, 1, SpringLayout.NORTH, inputField);
 		
 		
-		//chatArea = new JTextArea(10, 25);
+		chatArea = new JTextArea(10, 25);
 		//call new helper method
 		
 		setupScrollPane();
@@ -111,7 +111,7 @@ public class ChatPanel extends JPanel
 		this.setBackground(Color.CYAN);
 		this.setLayout(baseLayout);
 		//buttons
-		//this.add(chatButton);
+		this.add(chatButton);
 		//this.add(exitButton);
 		//this.add(randomButton);
 		//this.add(checkerButton);
@@ -123,8 +123,8 @@ public class ChatPanel extends JPanel
 		this.add(searchButton);
 		//text area
 		this.add(inputField);
-		//chatArea.setEnabled(true);
-		//chatArea.setEditable(false);
+		chatArea.setEnabled(true);
+		chatArea.setEditable(false);
 		
 	
 
@@ -136,7 +136,7 @@ public class ChatPanel extends JPanel
 	private void setupLayout()
 	{
 		// TextArea
-		//baseLayout.putConstraint(SpringLayout.WEST, inputField, 0, SpringLayout.WEST, chatArea);
+		baseLayout.putConstraint(SpringLayout.WEST, inputField, 0, SpringLayout.WEST, chatArea);
 		baseLayout.putConstraint(SpringLayout.NORTH, chatScrollPane, 20, SpringLayout.NORTH, this);
 		baseLayout.putConstraint(SpringLayout.WEST, chatScrollPane, 25, SpringLayout.WEST, this);
 		baseLayout.putConstraint(SpringLayout.EAST, chatScrollPane, -25, SpringLayout.EAST, this);
@@ -152,17 +152,17 @@ public class ChatPanel extends JPanel
 	 */
 	private void setupListeners()
 	{
-//		chatButton.addActionListener(new ActionListener()
-//		{
-//			public void actionPerformed(ActionEvent click)
-//			{
-//				String userText = inputField.getText();
-//				String displayText = baseController.interactWithChatbot(userText);
-//				chatArea.append(displayText);
-//				inputField.setText("");
-//			}
-//		});
-//
+		chatButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				String userText = inputField.getText();
+				String displayText = baseController.interactWithChatbot(userText);
+				chatArea.append(displayText);
+				inputField.setText("");
+			}
+		});
+
 //		checkerButton.addActionListener(new ActionListener()
 //		{
 //			public void actionPerformed(ActionEvent click)
@@ -217,6 +217,13 @@ public class ChatPanel extends JPanel
 			public void actionPerformed(ActionEvent click)
 			{
 				baseController.tweet(inputField.getText());
+			}
+		});
+		searchButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				chatArea.setText(baseController.search(inputField.getText()));
 			}
 		});
 	}
