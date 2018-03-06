@@ -24,11 +24,13 @@ public class CTECTwitter
 	private Twitter chatbotTwitter;
 	private List<Status> searchedTweets;
 	private List<String> tweetedWords;
+	private 
 	
 	public CTECTwitter(ChatController baseController)
 	{
 		this.baseController = baseController;
 		this.chatbotTwitter = TwitterFactory.getSingleton();
+		this. = searchedTweets;
 	}
 	
 	public void sendTweet(String textToTweet)
