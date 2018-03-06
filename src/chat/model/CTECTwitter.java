@@ -38,7 +38,8 @@ public class CTECTwitter
 		{
 			//chatbotTwitter.updateStatus("I just tweeted from my Java Chatbot program! #APCSRocks @CTECNow Thanks @cscheerleader & @codyhenrichsen! Amber Bullough");
 
-			chatbotTwitter.updateStatus(textToTweet + " @ChatbotCTEC");
+			//chatbotTwitter.updateStatus(textToTweet + " @ChatbotCTEC");
+			chatbotTwitter.updateStatus(textToTweet);
 		}
 		catch(TwitterException tweetError)
 		{
@@ -58,9 +59,24 @@ public class CTECTwitter
 		collectTweets(username);
 		turnStatusesToWords();
 		String [] boring = createIgnoredWordArray();
-		
+		trimTheBoringWords(boring);		
 		
 		return mostCommon;
+	}
+	
+	private void trimTheBoringWords(String [] boringWords)
+	{
+		for (int index = tweetedWords.size()-1; index >- 0; index--)
+		{
+			for(int boringIndex = 0; boringIndex < boringWords.length; boringIndex++)
+			{
+				if(tweetedWords.get(index).equals(boringWords[boringIndex]));
+				{
+					tweetedWords.remove(index);
+					boringIndex = Integer.MAX_VALUE;
+				}
+			}
+		}
 	}
 	private void collectTweets(String username)
 	{
@@ -101,7 +117,7 @@ public class CTECTwitter
 		for(Status currentStatus : searchedTweets)
 		{
 			String tweetText = currentStatus.getText();
-			String [] tweetWords = tweetText.split("");
+			String [] tweetWords = tweetText.split(" ");
 			for(int index = 0;index < tweetWords.length; index++)
 			{
 				tweetedWords.add(removePunctuation(tweetWords[index]).trim());
